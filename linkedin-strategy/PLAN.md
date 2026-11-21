@@ -10,6 +10,41 @@ Where the two disagree, the plan follows the 2026 reach data and says why (§10)
 
 > `[fill]` marks a spot only you can complete. Never post a number you can't back up. The skills enforce this too: they won't invent a figure.
 
+**Current as of: 21 November 2026.** Re-check §A each quarter; LinkedIn changes fast.
+
+---
+
+## A. What's true on LinkedIn right now (Nov 2026)
+
+These are the platform changes this plan is built around. Most come from third-party trackers, not LinkedIn's own changelog, so each one carries a confidence note.
+
+| When | Change | What it means for you | Confidence |
+|---|---|---|---|
+| **9 Nov 2026** | LinkedIn Engineering described **Profile Relevance**: an LLM-based system that recommends posts to people *outside* your network by matching post content to member profiles. Ranking works as retrieval first, then engagement. | **Say who the post is for and what problem it solves in the first 2 lines** ("If you run LLM evals in production…"). Keep your headline, About and posts on the same 2-3 topics, so the system knows who to show you to. Topic consistency now drives reach to non-followers. | High (LinkedIn engineering post) |
+| **Oct 2026** | **Pinned comments**: authors can pin one comment to the top of their post. | Put the lead magnet or newsletter link in a **pinned** comment, instead of hoping your first comment stays on top. Or pin the best reader question to keep the thread going. | High |
+| **Late Jul 2026 →** | **"Comment KEYWORD to get the guide" posts collapsed.** MagicPost's Oct 2026 analysis: these posts went from beating their author's usual views to about **half** of them. Follows the Mar 2026 authenticity update and the Jul 2026 "AI slop" report button. | **No keyword gates at all.** The earlier "once a month" allowance is removed. | Medium-high (vendor data, consistent with LinkedIn's own statements) |
+| **2026 (rolling)** | **Format reach** (AuthoredUp, 3M posts): documents/carousels **1.39x** average reach, images **1.20x**, video **0.86x**, plain text below average. Video views fell ~36% YoY (Socialinsider). Carousels now accept mixed photos and videos you can reorder. | Carousels stay the main Educate format. **Real photos now beat plain text**, so add an image to Storytell posts. Don't build the strategy on video yet. | Medium (large analytics-tool datasets) |
+| **2026** | **Analytics** now show **saves, sends, and in-network vs out-of-network reach**. Newsletters show email **sends and open rate**, and can have a video cover. | Track **sends** (people forwarding your post) and **out-of-network reach** (Profile Relevance working) weekly. Track newsletter open rate. | High |
+| **Rolling out** | **Collaborative Posts** (co-authored with another member). | Co-author 1 post a month with a peer from your Audience A list. You both get each other's network. | Medium (not on every account yet) |
+| **Contested** | **External-link penalty.** Some blogs claim about -60% reach. LinkedIn's VP of Content Daniel Roth reportedly said "we don't have anything in the algo about links." | Default to the pinned-comment link (no downside). Test one in-body link post in week 3 and compare. | Low: disputed |
+| **Contested** | Claims that a "150B-parameter 360Brew" model ranks the whole feed. | Ignore the specifics. The confirmed part is Profile Relevance (above). | Low |
+| **Unverified** | **Super Likes** showing on some accounts. | Watch, don't plan around it. | Low |
+
+**Still holds in Nov 2026** (from the linkedin-skills Sep 2026 audit, updated by the repo through 18 Nov 2026):
+- Line 1 is a number or statement, never a question (-34% median likes).
+- No autopilot AI phrasing ("Here's what nobody tells you", "The result?").
+- Most of a post's reach is decided in the first 60-90 minutes.
+- 0-2 hashtags.
+
+### Ideas this plan deliberately leaves out (outdated in 2026)
+- Keyword comment gates ("comment GUIDE"). They lost about half their reach after Jul 2026.
+- Engagement pods and like-for-like groups (detected and penalised).
+- Hashtag stacking (5+ tags reads as spam; relevance now comes from the text).
+- Posting about everything to "grow faster". Profile Relevance rewards a narrow, consistent topic.
+- Video-first growth (video reach and views are down year on year).
+- Bare text-only posts for personal stories (images now outperform them).
+- Plain "link in first comment" (use a **pinned** comment).
+
 ---
 
 ## 0. The one-line strategy
@@ -72,7 +107,7 @@ Pick the third only once the venture is public and approved.
 |---|---|---|---|---|---|
 | **Educate** | 2 | 50% | Teardowns, cost math, eval frameworks, architecture patterns, "what broke and why". Polls and creator spotlights live here too. | Carousel, long text, poll | F7 Odd-Precision, F10 Contrarian + Receipts, F15 Explain-to-Kids, F19 Anecdote + Evidence, F8 Paid-vs-Free |
 | **Storytell** | 1 | 25% | Your path, mistakes, lessons from customer work (anonymised), building the venture in public | Long text, multi-image (3-4 real photos) | Reintroduction post (§6), F3 Year-over-Year, F11 Emotional Cold-Open, F4 Time-Anchor (dated and real only), F14 Named Gratitude |
-| **Sell** | 1 | 25% | **Soft** sells only: lead magnet, newsletter issue, waitlist, later the launch. Each one teaches something on its own, and the ask comes last. | Single image or carousel + CTA in first comment | F8 Paid-vs-Free, F13 Bait-and-Switch, F1 Anaphora |
+| **Sell** | 1 | 25% | **Soft** sells only: lead magnet, newsletter issue, waitlist, later the launch. Each one teaches something on its own, and the ask comes last. | Single image or carousel + CTA in pinned comment | F8 Paid-vs-Free, F13 Bait-and-Switch, F1 Anaphora |
 
 The skills playbook caps product posts at 1 per week. 4-3-2-1 lands exactly there, so the two agree. Keep Sell posts soft. A hard pitch every Friday trains people to scroll past.
 
@@ -106,9 +141,10 @@ Alternatives, if they fit the venture better: an open-source eval harness templa
 
 **How to distribute it (adapted for 2026, see §10):**
 - Launch it with an **F8 Paid-vs-Free** post: "the checklist I'd charge for, free".
-- Put the link **in the first comment**, never in the body. In-body links cut reach 40-60%.
+- Put the link in a **pinned comment** (new in Oct 2026), not the body. The link penalty is disputed (§A), but the pinned comment costs nothing and stays at the top.
+- Open the launch post with who it's for ("If you're shipping an LLM app to production this quarter…") so Profile Relevance can find Audience B outside your network.
 - Collect emails on a simple landing page (Beehiiv, ConvertKit or Substack). That is the owned list.
-- **No "comment CHECKLIST to get it" gates.** LinkedIn's March 2026 authenticity update names these as engagement bait. If you want a keyword gate, use one at most once a month, and only with a real deliverable sent by hand.
+- **No "comment CHECKLIST to get it" gates, ever.** Since late July 2026 these posts get about half their author's usual views (§A).
 - Pin it in Featured. Re-share it through the newsletter every month, and point to it in the P.S. of any Educate post on a related topic.
 
 Build it in **week 0-1**, launch it in **week 2** (§6).
@@ -156,9 +192,9 @@ Run the draft through `linkedin-post-writer` (closest formulas: **F3 Year-over-Y
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
 |---|---|---|---|---|---|---|
 | Tue | Educate | A | Carousel (7 slides) | F7 Odd-Precision | "What a production RAG app actually costs per 1,000 queries: $[fill], broken down line by line" | Saves |
-| Wed | **Storytell** | A+B | Long text | **Reintroduction post** | Four-part story (above) | Comments, follows |
+| Wed | **Storytell** | A+B | Long text + 1 real photo | **Reintroduction post** | Four-part story (above) | Comments, follows |
 | Thu | Educate | B | Poll | Poll | "What's actually blocking your GenAI app from production? Evals / Cost / Latency / Governance" | Reach + research for the lead magnet |
-| Fri | Sell (soft) | A+B | Short text | F13 Bait-and-Switch | "Starting a weekly newsletter: [name]. One production GenAI teardown a week. First issue Sunday." Link in first comment. | Subs |
+| Fri | Sell (soft) | A+B | Short text | F13 Bait-and-Switch | "Starting a weekly newsletter: [name]. One production GenAI teardown a week. First issue Sunday." Link in pinned comment. | Subs |
 
 ### Week 2: "Lead magnet launch"
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
@@ -166,7 +202,7 @@ Run the draft through `linkedin-post-writer` (closest formulas: **F3 Year-over-Y
 | Tue | Educate | B | Long text | F10 Contrarian + Historical | "Most GenAI apps don't fail on the model. They fail where every data project since 2010 failed: [fill]." Use week 1's poll results as a receipt. | Comments |
 | Wed | Storytell | A | Multi-image (3-4 photos) | F11 Emotional Cold-Open | A real moment: a customer workshop, a failed demo, a 2 AM incident. Dated and specific. | Likes |
 | Thu | Educate | A | Carousel | F15 Explain-to-Kids | "AI agents explained like you're 10", first of a series | Saves |
-| Fri | **Sell** | B | Carousel preview + link in 1st comment | F8 Paid-vs-Free | **Lead magnet launch:** "The [N]-point Production GenAI Readiness Checklist. I'd charge for it; it's free." Show 3 items, link to the rest. | Sign-ups |
+| Fri | **Sell** | B | Carousel preview + pinned-comment link | F8 Paid-vs-Free | **Lead magnet launch:** "The [N]-point Production GenAI Readiness Checklist. I'd charge for it; it's free." Show 3 items, link to the rest. | Sign-ups |
 | Sun | Newsletter #1 | — | — | — | Deep version of Tuesday's post | Subs |
 
 ### Week 3: "Depth + community"
@@ -175,7 +211,7 @@ Run the draft through `linkedin-post-writer` (closest formulas: **F3 Year-over-Y
 | Tue | Educate | A | Long text | F19 Anecdote + Evidence | "I noticed [fill: pattern across N teams]. Then I checked [public benchmark/paper]." | Comments/Saves |
 | Wed | Storytell | A | Text + tags | F14 Named Gratitude | Spotlight 3 builders or OSS maintainers whose work you use. Tag them and say why, specifically. | Reposts |
 | Thu | Educate | A | Carousel | F15 Explain-to-Kids #2 | "RAG explained like you're 10" | Saves |
-| Fri | Sell (soft) | B | Short text | F1 Anaphora (light) | Lead-magnet proof: "[N] people downloaded the checklist. The item most teams fail: [fill]." Link in first comment. | Sign-ups |
+| Fri | Sell (soft) | B | Short text | F1 Anaphora (light) | Lead-magnet proof: "[N] people downloaded the checklist. The item most teams fail: [fill]." Link in pinned comment. | Sign-ups |
 | Sun | Newsletter #2 | — | — | — | — | Subs |
 
 ### Week 4: "Build in public begins"
@@ -224,7 +260,10 @@ Or on claude.ai: Customize → Plugins → Add marketplace → `sergebulaev/link
 - Hook fits in **140 characters** (mobile "…see more" cutoff).
 - 900-1,300 characters by default. Long posts (1,500+) work if every line earns its place.
 - **0-2 hashtags**, at the end.
-- **No links in the body.** Put them in the first comment ("Link below ↓").
+- **Links go in a pinned comment** ("Link pinned below ↓"), not the body.
+- **Lines 1-2 name the audience and the problem.** Profile Relevance (Nov 2026) uses them to find readers outside your network.
+- **Add a real photo to Storytell posts** and a carousel to most Educate posts. Plain text is now the weakest format for reach.
+- **Co-author 1 post a month** using Collaborative Posts, once it's on your account.
 - One contrast and one triple per post at most. No "The result?" or "Here's what nobody tells you".
 - Add a **P.S.** when there's a real follow-up (+7.5%). This is where the lead magnet gets mentioned on Educate posts.
 - Every claim gets a specific (date, number, name) within 2 lines.
@@ -238,7 +277,10 @@ Or on claude.ai: Customize → Plugins → Add marketplace → `sergebulaev/link
 | Metric | Why | Week-12 target (set your own baseline in week 0) |
 |---|---|---|
 | **Lead magnet sign-ups + newsletter subscribers** | The owned list the venture launches into. This is the north star. | Baseline + [fill] |
-| Saves per Educate post | Strongest signal (≈5x a like) | Rising trend |
+| Saves per Educate post | Strongest signal (≈5x a like). Now shown in native analytics. | Rising trend |
+| **Sends per post** | People forwarding your post in DMs. New in 2026 analytics. | Rising trend |
+| **Out-of-network reach %** | Shows Profile Relevance is finding you new readers. New in 2026 analytics. | Rising trend |
+| Newsletter open rate | Whether subscribers actually read it. New in 2026 analytics. | ≥ 40% |
 | Comments >10 words | Quality engagement | ≥ 15 per post |
 | Sell-post conversion | Sign-ups per Sell post, from the landing page | Rising trend |
 | Audience mix (A vs B) of engagers | Are buyers showing up? Use `linkedin-engager-analytics`. | B ≥ 25% |
@@ -252,7 +294,7 @@ Or on claude.ai: Customize → Plugins → Add marketplace → `sergebulaev/link
 ## 9. Months 2-6 roadmap
 
 - **Month 2:** Newsletter weekly. Start one signature recurring Educate series (e.g. "Production GenAI Teardown #N"). Guest on 1 podcast or Space.
-- **Month 3:** Refresh or add a second lead magnet aimed squarely at Audience B (e.g. the cost-per-outcome calculator). Consider a free live session or masterclass, as Lara does, but promote it with a link in the first comment rather than a keyword gate.
+- **Month 3:** Refresh or add a second lead magnet aimed squarely at Audience B (e.g. the cost-per-outcome calculator). Consider a free live session or masterclass, as Lara does, but promote it with a pinned-comment link rather than a keyword gate.
 - **Month 4:** Storytell slot becomes a weekly venture build-in-public update. Use polls to validate pricing and features.
 - **Month 5:** Waitlist and soft launch to the email list first, LinkedIn second.
 - **Month 6:** Launch week. Still one Sell post, plus a Storytell ("why I built this") and an Educate post (the problem, with data). Reuse the stories already tested in the Story Bank.
@@ -270,7 +312,7 @@ Source: Lara Acosta (@laraacostar), two reels on LinkedIn content strategy. Buil
 | **2 types of audience** | §3: Practitioners (A) and Buyers (B). Every post is tagged; comment lists mirror the split. | **Keep.** |
 | **1 lead magnet** | §4: Production GenAI Readiness Checklist, launched week 2 and pinned in Featured | **Keep.** Moved earlier than the original plan (week 2 instead of month 3). |
 | **Reintroduction post** (relatable hook → timeline → feel-good close) | §6: week 1 Wednesday, then pinned | **Keep.** Ideal for an active account changing direction. Hook stays number-first, never a question. |
-| **"Comment EVENT to join my masterclass"** CTA | §4 and §9 | **Adapt.** LinkedIn's March 2026 authenticity update targets comment-gate CTAs, and posts flagged as "AI slop" lose about 40% of views. Use a link in the first comment instead; at most one real, hand-delivered keyword gate a month. |
+| **"Comment EVENT to join my masterclass"** CTA | §4 and §9 | **Drop the gate, keep the event.** Since late July 2026, "comment KEYWORD" posts get about half their author's usual views (MagicPost, Oct 2026). Use a pinned-comment link instead. |
 
 ---
 
@@ -287,3 +329,20 @@ Source: Lara Acosta (@laraacostar), two reels on LinkedIn content strategy. Buil
 - [ ] Build the three comment lists (peers / aspirational / prospects).
 - [ ] Record baseline metrics.
 - [ ] Draft the reintroduction post and the rest of week 1.
+
+---
+
+## Sources for §A (checked 21 Nov 2026)
+
+- [LinkedIn Product Updates: November 2026 Recap (Influent)](https://influent.co/blog/linkedin-updates-november-2026): Profile Relevance, Collaborative Posts, Super Likes
+- [LinkedIn Algorithm and Platform Updates in 2026 (Influent)](https://influent.co/blog/linkedin-platform-updates): pinned comments
+- [LinkedIn Algorithm Changes 2026: Every Update, Dated (VoiceMoat)](https://voicemoat.com/blog/linkedin-algorithm-changes-2026)
+- [In-Ear Insights: LinkedIn Algorithm Updates October 2026 (Trust Insights)](https://www.trustinsights.ai/blog/2026/09/in-ear-insights-linkedin-algorithm-updates-october-2026/): retrieval-then-ranking
+- [The 2026 LinkedIn Algorithm: What Actually Works Right Now (River)](https://rivereditor.com/blogs/2026-linkedin-algorithm-what-works-300-posts-tested)
+- [How Does the LinkedIn Algorithm Work in 2026? (Flypost)](https://www.flypost.io/learn/linkedin-algorithm-study-data): link-penalty dispute
+- [Best Performing Content on LinkedIn in 2026 (AuthoredUp)](https://authoredup.com/blog/best-performing-content-on-linkedin): format reach multipliers
+- [Best Content Format on Social Platforms in 2026 (Buffer)](https://buffer.com/resources/data-best-content-format-social-media/)
+- [13 New LinkedIn Features & Updates (SocialPilot)](https://www.socialpilot.co/blog/new-linkedin-features-and-updates): analytics, newsletters, carousels
+- [sergebulaev/linkedin-skills](https://github.com/sergebulaev/linkedin-skills): Sep 2026 reach audit, v1.1.29 (18 Nov 2026)
+
+Most of these are third-party summaries; the article pages couldn't be opened from this session, so the figures come from search-result extracts.
