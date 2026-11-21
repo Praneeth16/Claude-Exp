@@ -10,7 +10,7 @@ Where the two disagree, the plan follows the 2026 reach data and says why (§10)
 
 > `[fill]` marks a spot only you can complete. Never post a number you can't back up. The skills enforce this too: they won't invent a figure.
 
-**Current as of: 21 November 2026.** Re-check §A each quarter; LinkedIn changes fast.
+**Current as of: 21 November 2026.** Re-check §A (LinkedIn) and §B (AI and agents) each quarter; both change fast.
 
 ---
 
@@ -49,21 +49,57 @@ These are the platform changes this plan is built around. Most come from third-p
 
 ## 0. The one-line strategy
 
-**Be the engineer who shows what GenAI in production really costs, breaks and takes. Turn that trust into an owned audience (a newsletter + a lead magnet) that the side venture launches into.**
+**Be the engineer who shows what AI agents in production really cost, break and take, as of now, not as of 2024. Turn that trust into an owned audience (a newsletter + a lead magnet) that the side venture launches into.**
 
 ### The operating framework: 4-3-2-1
 
 | | Rule | What it means for you |
 |---|---|---|
 | **4** | posts a week | Tue / Wed / Thu / Fri. Monday is commenting day. |
-| **3** | content themes | **Educate** (production GenAI expertise) · **Storytell** (your path, building in public) · **Sell** (newsletter, lead magnet, venture) |
+| **3** | content themes | **Educate** (production AI agents expertise) · **Storytell** (your path, building in public) · **Sell** (newsletter, lead magnet, venture) |
 | **2** | types of audience | **Practitioners** who follow, share and amplify · **Buyers** who would pay for the venture (§3) |
 | **1** | lead magnet | One flagship free asset that turns followers into subscribers (§4) |
 
 Why this works for you:
-- Feeds are full of GenAI hype. People building it in production, with real receipts, are rare. You see real enterprise workloads every week, which is your unfair advantage.
+- In late 2026 nobody needs another "what is an agent" post. Agents are everywhere (90% of developers use coding agents weekly, per JetBrains), but most enterprise agents still don't reach production or can't prove impact. People who show the *production* side with receipts are rare. You see real enterprise workloads every week, which is your unfair advantage.
 - At 5k+ followers, original takes with evidence, a newsletter and a lead magnet are what compound.
 - A side venture needs an audience you own before launch day. Followers are rented. Subscribers and lead-magnet sign-ups are owned.
+
+---
+
+## B. What's true in AI and agents right now (Nov 2026)
+
+Your content has to sound like November 2026, not 2024. This is the landscape the Educate theme is built on. Each figure is "as reported", so check the original before you quote a number in a post.
+
+| Area | Where things are (Nov 2026) | Your angle |
+|---|---|---|
+| **Adoption vs. production** | Most enterprises say they've deployed agents: 79% (Genpact), with other surveys between 54% and 72%. A widely cited Forrester/Anaconda figure says 88% of agent pilots never reach production, and most companies can't measure business impact. | The pilot-to-production gap is *the* topic. You live on the production side of it. |
+| **Autonomy** | Only about 12% of production agents run fully autonomously. The dominant pattern is supervised autonomy (human-in-the-loop, risk tiers by data sensitivity and autonomy). | How to design autonomy tiers and approval points that don't kill the ROI. |
+| **Evals → runtime guardrails** | Evals have moved from pre-launch test suites to runtime verification layers that check intermediate steps before the agent acts. | "Your eval suite should run in production, not just CI." |
+| **Observability** | Trace-first observability is the H2 2026 infrastructure spend. Teams without it report about 3x more incidents (survey claim). CrowdStrike is buying Fiddler AI + Dreadnode (~$495M). | Teardowns of real agent traces (anonymised): where it actually broke. |
+| **Agent FinOps** | Token spend from long-running agents is the new cloud bill. Budget caps per user/group and AI gateways are now standard platform features. | Cost per *resolved task*, not per token. Your strongest number-first hook. |
+| **Context engineering + memory** | "Context rot": accuracy drops as long-running agents pile up context. The answer is context engineering: load, fetch just-in-time, compact, hand off to sub-agents, with short- and long-term memory layers. RAG is now one layer inside this stack, not the architecture. | Retire "RAG explained" content. Talk context budgets, compaction and memory design. |
+| **Interop standards** | **MCP + A2A both live under the Linux Foundation's Agentic AI Foundation** (A2A joined 17 Aug 2026; A2A v1.0 shipped Mar 2026). AAIF also hosts AGENTS.md and goose, and has 250+ member orgs. Draft "AI Catalog" format for listing a domain's MCP servers and agent cards. | The protocol war is over. The open questions are trust, auth and permissions between agents. |
+| **Agent security** | GAO report (20 Nov 2026): autonomous agents are already running cyberattacks with minimal human input, and there's no agreed way to certify defensive AI tools. | Tool permissions, prompt-injection and MCP-server hygiene for builders. Timely this month. |
+| **Coding agents** | 90% of professional developers use coding agents weekly, 68% daily (JetBrains, 15k devs, Jul 2026). Claude Code is used by 39% at work, up from 18% in January. Only about 29% trust the output. Parallel agents are rising; review is the bottleneck. | How an ML engineer actually runs coding agents: what you delegate, what you review, what you never hand over. |
+| **Model churn** | Several frontier and open-weight releases every month in Oct-Nov 2026 (Gemini 4 variants, GPT-6.x, very large open-weight models with 1M-token context). Names and dates differ between sources. | Don't do model hot takes. Show **how fast you can re-evaluate and swap a model** ("new model dropped Tuesday; here's our 48-hour eval"). |
+| **Data platforms** | Platforms are pitching the lakehouse as the agent "control plane": agent builders, transactional DBs for agent memory, AI gateways, governance (all major summit themes in 2026). | Your employer's space. Post from the *practitioner* angle only, after policy check, never roadmap. |
+| **India** | IndiaAI Mission has backed ~20 sovereign model efforts (Sarvam, Gnani.ai, BharatGen and others); 3 new indigenous foundation models were reported on 4 Nov 2026. | Indic-language and voice agents in production: a local angle few global creators can cover. |
+| **Regulation** | EU AI Act: a provisional May 2026 omnibus deal moves high-risk obligations to Dec 2027 / Aug 2028. Watermarking obligations reportedly land Dec 2026. Final adoption status unconfirmed. | One explainer for Audience B (buyers). Don't present dates as settled. |
+
+### Outdated AI topics to avoid
+- "What is RAG / what is an agent / what is MCP" explainers. Your audience uses all three daily.
+- Prompt-engineering tip lists. These have been replaced by context engineering.
+- "Fine-tune vs. RAG" as a binary. In 2026 the answer is a context stack plus evals.
+- "AI will replace developers" takes. 90% already use agents; the real conversation is review and trust.
+- Leaderboard or "model X beats model Y" hot takes. They're stale in a week.
+- "Chatbot" framing for enterprise use cases. Agents act; they don't just chat.
+- "Agents are hype". Adoption is real; the honest story is the production and impact gap.
+
+### Keep it current every week
+- **Sunday, 20 min:** skim the week's agent news (e.g. AAIF/MCP/A2A updates, major model releases, LinkedIn Engineering, a daily agents news brief). Pick **at most one** item to react to.
+- **Newsjacking rule:** reply to big news within 24-48 hours, only with a practitioner angle you can back up ("I ran it on our eval set: [number]"). It takes the week's Thursday Educate slot, so you stay at 4 posts.
+- Re-check this section (§B) every quarter.
 
 ---
 
@@ -78,17 +114,17 @@ Why this works for you:
 
 ## 2. Profile upgrade (week 0, ~2 hours)
 
-Use the **`linkedin-profile-optimizer`** skill. Paste your current headline, About and Featured sections and ask: *"Optimize my profile so GenAI builders follow me and download my lead magnet."*
+Use the **`linkedin-profile-optimizer`** skill. Paste your current headline, About and Featured sections and ask: *"Optimize my profile so people shipping AI agents follow me and download my lead magnet."*
 
 **Headline options** (formula: What you do | Who you help | Result, ≤220 chars):
 
-- `Shipping GenAI to production at [Employer] | Agents, RAG & LLM evals | Writing what it actually costs and breaks → [newsletter name]`
-- `ML/GenAI Engineer @ [Employer] | Helping teams take LLM apps from demo to production | Free: [lead magnet name]`
+- `Shipping AI agents to production at [Employer] | Evals, observability & agent cost | Writing what actually breaks → [newsletter name]`
+- `ML/GenAI Engineer @ [Employer] | Helping teams take AI agents from pilot to production | Free: [lead magnet name]`
 - `I help engineering teams ship reliable AI agents | GenAI @ [Employer] | Building [venture name] on the side`
 
 Pick the third only once the venture is public and approved.
 
-**About section:** hook line with a real number from your work. Then 3 short paragraphs: what you build, the pattern you keep seeing, and what readers get by following. End with one CTA to the lead magnet. Keyword targets (5+ improves search impressions about 3x): `GenAI`, `LLM`, `RAG`, `AI agents`, `MLOps`, `LLM evaluation`, `[Employer]`, `[Employer platform keywords]`.
+**About section:** hook line with a real number from your work. Then 3 short paragraphs: what you build, the pattern you keep seeing, and what readers get by following. End with one CTA to the lead magnet. Keyword targets (5+ improves search impressions about 3x): `AI agents`, `agentic AI`, `GenAI`, `LLM evaluation`, `agent observability`, `context engineering`, `MCP`, `[Employer]`, `[Employer platform keywords]`.
 
 **Featured section (3 slots):**
 1. **The lead magnet** (top slot, always)
@@ -111,14 +147,17 @@ Pick the third only once the venture is public and approved.
 
 The skills playbook caps product posts at 1 per week. 4-3-2-1 lands exactly there, so the two agree. Keep Sell posts soft. A hard pitch every Friday trains people to scroll past.
 
-**Topic territory for Educate** (pick the ones you have receipts for):
-- Cost per outcome of an agent vs. cost per token. What teams actually pay.
-- LLM-as-judge evals: where they lie and how to calibrate them.
-- RAG failure modes: chunking, stale indexes, retrieval that looks right but isn't.
-- "Demo → production" gap: governance, latency budgets, guardrails, monitoring.
-- Fine-tune vs. prompt vs. RAG: when each wins, with numbers.
-- Explain-to-kids series: tokens, embeddings, vector search, agents, MCP. (Strong save-driver.)
-- Contrarian takes with history: "every data platform wave had this exact moment".
+**Topic territory for Educate, Nov 2026** (pick the ones you have receipts for; see §B for context):
+- **Cost per resolved task**, not per token: what a production agent actually costs, line by line.
+- **Pilot → production:** why most agent pilots stall, and the 3-4 things the ones that ship do differently.
+- **Runtime evals:** verification layers between agent steps; LLM-as-judge calibration; regression evals when you swap models.
+- **Agent traces:** anonymised teardowns of where a real agent run went wrong.
+- **Context engineering and memory:** context rot, compaction, sub-agent handoff, what goes in long-term memory.
+- **Autonomy tiers:** where humans approve, and how to keep that from killing the ROI.
+- **Agent security:** tool permissions, prompt injection, MCP-server hygiene, agent identity under A2A.
+- **Model swaps in 48 hours:** how you re-evaluate when a new model drops (instead of hot takes).
+- **Coding agents for ML work:** what you delegate, what you review, what never gets handed over.
+- **Indic-language and voice agents** (India angle), and **EU AI Act explainer** for buyers (once).
 
 ### 2 audiences
 
@@ -127,7 +166,7 @@ Write every post for **one** of these, and say in the plan which one it's for.
 | Audience | Who | What they want | Which themes reach them |
 |---|---|---|---|
 | **A. Practitioners** | ML/GenAI/data engineers, DevRels, AI builders, mostly 1-20k followers | Tactics, code-level detail, honest failure stories | Educate (deep), Storytell |
-| **B. Buyers** | The people who'd pay for the venture: `[fill]` (e.g. eng managers, heads of data/AI, founders shipping LLM features) | Cost, risk, time-to-production, proof it works | Educate (cost/risk framing), Sell |
+| **B. Buyers** | The people who'd pay for the venture: `[fill]` (e.g. eng managers, heads of data/AI, founders moving agents from pilot to production) | Cost, risk, time-to-production, proof it works | Educate (cost/risk framing), Sell |
 
 Audience A gives you reach and credibility. Audience B gives you revenue. Most weeks: 2 posts for A, 2 for B. Your comment lists (§5) mirror this split.
 
@@ -135,14 +174,14 @@ Audience A gives you reach and credibility. Audience B gives you revenue. Most w
 
 ## 4. The 1 lead magnet
 
-**Recommendation:** *The Production GenAI Readiness Checklist*. A one-page PDF plus a Notion/GitHub version of the checks you'd want before an LLM app or agent ships: evals, cost ceilings, latency budgets, guardrails, monitoring, rollback. It shows your expertise directly, it's useful to both audiences, and it fits whatever the venture turns out to be.
+**Recommendation:** *The Agent Production Readiness Checklist (Nov 2026 edition)*. A one-page PDF plus a GitHub version of the checks you'd want before an agent ships: runtime evals and step verification, tracing, cost per task with budget caps, autonomy tier and approval points, tool/MCP permissions and prompt-injection tests, context and memory limits, model-swap regression suite, rollback. Date it, and update it each quarter. "Nov 2026 edition" signals that it's current, and every new edition is another Sell post. It shows your expertise directly, it's useful to both audiences, and it fits whatever the venture turns out to be.
 
-Alternatives, if they fit the venture better: an open-source eval harness template, a "cost per outcome" calculator spreadsheet, or a 5-day email course.
+Alternatives, if they fit the venture better: an open-source agent eval harness template, an agent cost-per-task calculator, or a 5-day email course on taking agents from pilot to production.
 
 **How to distribute it (adapted for 2026, see §10):**
 - Launch it with an **F8 Paid-vs-Free** post: "the checklist I'd charge for, free".
 - Put the link in a **pinned comment** (new in Oct 2026), not the body. The link penalty is disputed (§A), but the pinned comment costs nothing and stays at the top.
-- Open the launch post with who it's for ("If you're shipping an LLM app to production this quarter…") so Profile Relevance can find Audience B outside your network.
+- Open the launch post with who it's for ("If you're moving an agent from pilot to production this quarter…") so Profile Relevance can find Audience B outside your network.
 - Collect emails on a simple landing page (Beehiiv, ConvertKit or Substack). That is the owned list.
 - **No "comment CHECKLIST to get it" gates, ever.** Since late July 2026 these posts get about half their author's usual views (§A).
 - Pin it in Featured. Re-share it through the newsletter every month, and point to it in the P.S. of any Educate post on a related topic.
@@ -191,39 +230,39 @@ Run the draft through `linkedin-post-writer` (closest formulas: **F3 Year-over-Y
 ### Week 1: "Reintroduce"
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
 |---|---|---|---|---|---|---|
-| Tue | Educate | A | Carousel (7 slides) | F7 Odd-Precision | "What a production RAG app actually costs per 1,000 queries: $[fill], broken down line by line" | Saves |
+| Tue | Educate | A | Carousel (7 slides) | F7 Odd-Precision | "What one production agent actually costs per resolved task: $[fill], broken down line by line (model, tools, retries, human review)" | Saves |
 | Wed | **Storytell** | A+B | Long text + 1 real photo | **Reintroduction post** | Four-part story (above) | Comments, follows |
-| Thu | Educate | B | Poll | Poll | "What's actually blocking your GenAI app from production? Evals / Cost / Latency / Governance" | Reach + research for the lead magnet |
-| Fri | Sell (soft) | A+B | Short text | F13 Bait-and-Switch | "Starting a weekly newsletter: [name]. One production GenAI teardown a week. First issue Sunday." Link in pinned comment. | Subs |
+| Thu | Educate | B | Poll | Poll | "What's actually blocking your agents from production? Evals / Observability / Cost / Security & permissions" | Reach + research for the lead magnet |
+| Fri | Sell (soft) | A+B | Short text | F13 Bait-and-Switch | "Starting a weekly newsletter: [name]. One production agent teardown a week. First issue Sunday." Link in pinned comment. | Subs |
 
 ### Week 2: "Lead magnet launch"
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
 |---|---|---|---|---|---|---|
-| Tue | Educate | B | Long text | F10 Contrarian + Historical | "Most GenAI apps don't fail on the model. They fail where every data project since 2010 failed: [fill]." Use week 1's poll results as a receipt. | Comments |
+| Tue | Educate | B | Long text | F10 Contrarian + Historical | "88% of agent pilots never reach production (Forrester/Anaconda, as reported). It isn't the model. It's where every data project since 2010 stalled: [fill]." Use week 1's poll results as a second receipt. | Comments |
 | Wed | Storytell | A | Multi-image (3-4 photos) | F11 Emotional Cold-Open | A real moment: a customer workshop, a failed demo, a 2 AM incident. Dated and specific. | Likes |
-| Thu | Educate | A | Carousel | F15 Explain-to-Kids | "AI agents explained like you're 10", first of a series | Saves |
-| Fri | **Sell** | B | Carousel preview + pinned-comment link | F8 Paid-vs-Free | **Lead magnet launch:** "The [N]-point Production GenAI Readiness Checklist. I'd charge for it; it's free." Show 3 items, link to the rest. | Sign-ups |
+| Thu | Educate | A | Carousel | F15 Explain-to-Kids | "Context rot explained like you're 10: why long-running agents get worse the longer they run", first of a series | Saves |
+| Fri | **Sell** | B | Carousel preview + pinned-comment link | F8 Paid-vs-Free | **Lead magnet launch:** "The [N]-point Agent Production Readiness Checklist, Nov 2026 edition. I'd charge for it; it's free." Show 3 items, link to the rest. | Sign-ups |
 | Sun | Newsletter #1 | — | — | — | Deep version of Tuesday's post | Subs |
 
 ### Week 3: "Depth + community"
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
 |---|---|---|---|---|---|---|
-| Tue | Educate | A | Long text | F19 Anecdote + Evidence | "I noticed [fill: pattern across N teams]. Then I checked [public benchmark/paper]." | Comments/Saves |
+| Tue | Educate | A | Long text | F19 Anecdote + Evidence | "I noticed [fill: how you review coding-agent output]. Then JetBrains' 2026 survey: 90% of devs use coding agents weekly, only ~29% trust the output." | Comments/Saves |
 | Wed | Storytell | A | Text + tags | F14 Named Gratitude | Spotlight 3 builders or OSS maintainers whose work you use. Tag them and say why, specifically. | Reposts |
-| Thu | Educate | A | Carousel | F15 Explain-to-Kids #2 | "RAG explained like you're 10" | Saves |
+| Thu | Educate | A | Carousel | F15 Explain-to-Kids #2 | "MCP vs A2A explained like you're 10, and why both now live at the Linux Foundation" | Saves |
 | Fri | Sell (soft) | B | Short text | F1 Anaphora (light) | Lead-magnet proof: "[N] people downloaded the checklist. The item most teams fail: [fill]." Link in pinned comment. | Sign-ups |
 | Sun | Newsletter #2 | — | — | — | — | Subs |
 
 ### Week 4: "Build in public begins"
 | Day | Theme | Aud. | Format | Formula | Angle | Goal |
 |---|---|---|---|---|---|---|
-| Tue | Educate | B | Long text | F17 Controlled A/B | "Same agent, two setups, one variable changed: [fill]. Cost and accuracy side by side." | Comments |
+| Tue | Educate | B | Long text | F17 Controlled A/B | "Same agent, two models (a closed frontier model vs an open-weight one), one variable changed. Cost per task and accuracy side by side: [fill]." | Comments |
 | Wed | Storytell | A+B | Long text | F4 Time-Anchor (real, dated) | "On [date] I started building [venture] nights and weekends. [Real number]." Only once the venture is approved. | Comments |
 | Thu | Educate | B | Poll | Poll | Validate a venture assumption: "Would you pay for X / Y / Z / none?" | Insight |
 | Fri | Sell (soft) | B | Single image | F13 Bait-and-Switch | Waitlist teaser, or the newsletter's best issue so far | Waitlist/Subs |
 | Sun | Newsletter #3 | — | — | — | Month-1 retro: what worked, with numbers | Subs |
 
-**Weeks 5-12:** run **`linkedin-content-planner`** each Sunday with this brief: *"4 posts/week, themes Educate 50% / Storytell 25% / Sell 25%, audiences A and B, one lead magnet: [name]."* It checks the mix, so no formula repeats and the goals stay balanced.
+**Weeks 5-12:** run **`linkedin-content-planner`** each Sunday with this brief: *"4 posts/week, themes Educate 50% / Storytell 25% / Sell 25%, audiences A and B, one lead magnet: [name]. Topics must reflect §B (Nov 2026 AI landscape); avoid the outdated-topic list."* It checks the mix, so no formula repeats and the goals stay balanced.
 
 ---
 
@@ -293,8 +332,8 @@ Or on claude.ai: Customize → Plugins → Add marketplace → `sergebulaev/link
 
 ## 9. Months 2-6 roadmap
 
-- **Month 2:** Newsletter weekly. Start one signature recurring Educate series (e.g. "Production GenAI Teardown #N"). Guest on 1 podcast or Space.
-- **Month 3:** Refresh or add a second lead magnet aimed squarely at Audience B (e.g. the cost-per-outcome calculator). Consider a free live session or masterclass, as Lara does, but promote it with a pinned-comment link rather than a keyword gate.
+- **Month 2:** Newsletter weekly. Start one signature recurring Educate series (e.g. "Agent Teardown #N": one real, anonymised agent trace a week). Guest on 1 podcast or Space.
+- **Month 3:** Refresh or add a second lead magnet aimed squarely at Audience B (e.g. the agent cost-per-task calculator). Consider a free live session or masterclass, as Lara does, but promote it with a pinned-comment link rather than a keyword gate.
 - **Month 4:** Storytell slot becomes a weekly venture build-in-public update. Use polls to validate pricing and features.
 - **Month 5:** Waitlist and soft launch to the email list first, LinkedIn second.
 - **Month 6:** Launch week. Still one Sell post, plus a Storytell ("why I built this") and an Educate post (the problem, with data). Reuse the stories already tested in the Story Bank.
@@ -310,7 +349,7 @@ Source: Lara Acosta (@laraacostar), two reels on LinkedIn content strategy. Buil
 | **4 posts a week** | §0 and §6: Tue-Fri, with Monday for comments | **Keep.** Inside the skills playbook's 3-5/week safe range. |
 | **3 content themes: Educate, Storytell, Sell** | §3. These replace the skills repo's 4-pillar mix. Community content (polls, spotlights) folds into Educate and Storytell. | **Keep.** Sell is held to 1/week and kept soft, which matches the playbook's product-post cap. |
 | **2 types of audience** | §3: Practitioners (A) and Buyers (B). Every post is tagged; comment lists mirror the split. | **Keep.** |
-| **1 lead magnet** | §4: Production GenAI Readiness Checklist, launched week 2 and pinned in Featured | **Keep.** Moved earlier than the original plan (week 2 instead of month 3). |
+| **1 lead magnet** | §4: Agent Production Readiness Checklist (Nov 2026 edition), launched week 2 and pinned in Featured | **Keep.** Moved earlier than the original plan (week 2 instead of month 3). |
 | **Reintroduction post** (relatable hook → timeline → feel-good close) | §6: week 1 Wednesday, then pinned | **Keep.** Ideal for an active account changing direction. Hook stays number-first, never a question. |
 | **"Comment EVENT to join my masterclass"** CTA | §4 and §9 | **Drop the gate, keep the event.** Since late July 2026, "comment KEYWORD" posts get about half their author's usual views (MagicPost, Oct 2026). Use a pinned-comment link instead. |
 
@@ -346,3 +385,18 @@ Source: Lara Acosta (@laraacostar), two reels on LinkedIn content strategy. Buil
 - [sergebulaev/linkedin-skills](https://github.com/sergebulaev/linkedin-skills): Sep 2026 reach audit, v1.1.29 (18 Nov 2026)
 
 Most of these are third-party summaries; the article pages couldn't be opened from this session, so the figures come from search-result extracts.
+
+## Sources for §B (checked 21 Nov 2026)
+
+- [Washington Times: GAO report on AI agents carrying out cyberattacks (20 Nov 2026)](https://washingtontimes.com/news/2026/nov/20/ai-agents-carrying-cyberattacks-minimal-human-input)
+- AI Agents Directory news briefs: [6 Nov](https://aiagentsdirectory.com/news/ai-agents-news-brief-november-6-2026), [7 Nov](https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026), [18 Nov](https://aiagentsdirectory.com/news/ai-agents-news-brief-november-18-2026), [21 Nov](https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-21-2026): Genpact adoption figure, acquisitions
+- [Agentic AI enterprise adoption 2026 (Agentic AI Institute)](https://agenticaiinstitute.org/agentic-ai-enterprise-adoption-2026-governance-gap/), [Enterprise AI agents mid-year 2026 (Aldric Research)](https://aldricresearch.com/enterprise-ai-agents-mid-year-2026), [AI agent observability/eval/governance market (Deepak Gupta)](https://guptadeepak.com/ai-agent-observability-evaluation-governance-the-2026-market-reality-check/), [Galileo: AI observability trends 2026](https://galileo.ai/blog/ai-observability-trends-2026)
+- [Forbes: Agent2Agent joins the Agentic AI Foundation alongside MCP (19 Aug 2026)](https://www.forbes.com/sites/janakirammsv/2026/08/19/agent2agent-joins-the-agentic-ai-foundation-alongside-mcp/), [Tobira: what AAIF settles](https://blog.tobira.ai/a2a-mcp-agentic-ai-foundation/)
+- [LangChain: context engineering for Deep Agents](https://langchain.com/blog/context-engineering-deep-agents-remember), [Oracle: what is context engineering](https://blogs.oracle.com/developers/what-is-context-engineering-the-four-operations-that-decide-whether-your-agent-survives-production)
+- [JetBrains Research: AI coding agent adoption 2026](https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/), [Stack Overflow: agents on a leash](https://stackoverflow.blog/2026/05/27/agents-on-a-leash-agentic-ai-remains-mostly-monitored-at-work/)
+- [LLM Gateway: model release timeline](https://llmgateway.io/timeline), [Clone Systems: new AI models Nov 2026](https://www.clone-systems.com/blog/new-ai-models-november-2026-release-guide-and-security): names and dates conflict between sources
+- [Atlan: Data + AI Summit 2026 announcements](https://atlan.com/know/ai-agent/databricks/databricks-data-ai-summit-2026-announcements/), [Bain: the lakehouse as agentic control plane](https://www.bain.com/insights/databricks-data-ai-summit-the-lakehouse-becomes-the-agentic-enterprise-control-plane/)
+- [News On AIR: 3 indigenous AI foundation models under IndiaAI Mission (4 Nov 2026)](https://newsonair.gov.in/govt-launches-3-new-indigenous-ai-foundation-models-under-indiaai-mission-to-strengthen-homegrown-ai-capabilities/), [Kotak Neo: 20 sovereign models](https://www.kotakneo.com/news/sectors/india-ai-mission-20-indigenous-sovereign-models-sarvam-gnani-bharatgen-2026/)
+- [Gibson Dunn: EU AI Act omnibus agreement](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/), [Hogan Lovells: delay for high-risk AI rules](https://www.hoganlovells.com/en/publications/eu-legislators-agree-to-delay-for-highrisk-ai-rules)
+
+Figures are as reported in search-result extracts, mostly from secondary sources; verify the primary source before quoting a number in a post.
